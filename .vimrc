@@ -1,6 +1,17 @@
 set nocompatible
 filetype off
-call pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
@@ -17,6 +28,23 @@ set noswapfile
 set nobackup
 set nowritebackup
 set backspace=indent,eol,start
+
+set lazyredraw
+set showmode
+set smartindent
+set autoindent
+set hlsearch
+set history=999
+set incsearch
+set showmatch
+
+nmap <C-t> :tabnew<CR>
+nmap <C-j> :tabprevious<CR>
+nmap <C-k> :tabnext<CR>
+
+set background=dark
+
+colorscheme mango
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD Tree related.
