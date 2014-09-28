@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -8,7 +9,6 @@ call vundle#begin()
 "
 " " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -19,6 +19,12 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+
+set laststatus=2
+
+set t_Co=256
+set wildmenu
+set wildmode=full
 
 set expandtab
 set tabstop=2
